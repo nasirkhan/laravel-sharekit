@@ -8,6 +8,7 @@ It is designed to work well as a standalone package or alongside packages like `
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/nasirkhan/laravel-sharekit.svg?style=flat-square)](https://packagist.org/packages/nasirkhan/laravel-sharekit)
 [![Total Downloads](https://img.shields.io/packagist/dt/nasirkhan/laravel-sharekit.svg?style=flat-square)](https://packagist.org/packages/nasirkhan/laravel-sharekit)
+[![StyleCI](https://github.styleci.io/repos/1155376409/shield?branch=main&style=flat-square)](https://github.styleci.io/repos/1155376409)
 
 ## Features
 
@@ -271,3 +272,4 @@ If you discover any security related issues, please email `nasir8891@gmail.com` 
 ## License
 
 The GNU General Public License v3.0 or later. Please see [LICENSE](LICENSE) for more information.
+
