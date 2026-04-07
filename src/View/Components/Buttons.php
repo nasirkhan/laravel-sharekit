@@ -39,16 +39,16 @@ class Buttons extends Component
         public bool $popup = true,
         public bool $native = true,
     ) {
-        $metadataResolver = new MetadataResolver;
+        $metadataResolver = new MetadataResolver();
 
         $this->resolvedMetadata = $metadataResolver->resolve([
-            'url' => $this->url,
-            'title' => $this->title,
-            'text' => $this->text,
+            'url'         => $this->url,
+            'title'       => $this->title,
+            'text'        => $this->text,
             'description' => $this->description,
-            'image' => $this->image,
-            'via' => $this->via,
-            'hashtags' => $this->normalizeHashtags($this->hashtags),
+            'image'       => $this->image,
+            'via'         => $this->via,
+            'hashtags'    => $this->normalizeHashtags($this->hashtags),
         ]);
 
         $configuredNetworks = config('sharekit.networks', []);
@@ -56,7 +56,7 @@ class Buttons extends Component
             ->map(fn (string $network) => Str::of($network)->lower()->trim()->value())
             ->filter()
             ->unique()
-            ->when(! $this->native, fn ($collection) => $collection->reject('native'))
+            ->when(!$this->native, fn ($collection) => $collection->reject('native'))
             ->values()
             ->all();
 
