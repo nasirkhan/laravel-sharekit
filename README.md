@@ -8,7 +8,7 @@ It is designed to work well as a standalone package or alongside packages like `
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/nasirkhan/laravel-sharekit.svg?style=flat-square)](https://packagist.org/packages/nasirkhan/laravel-sharekit)
 [![Total Downloads](https://img.shields.io/packagist/dt/nasirkhan/laravel-sharekit.svg?style=flat-square)](https://packagist.org/packages/nasirkhan/laravel-sharekit)
-[![StyleCI](https://github.styleci.io/repos/1155376409/shield?branch=main&style=flat-square)](https://github.styleci.io/repos/1155376409)
+[![StyleCI](https://github.styleci.io/repos/1204109942/shield?branch=main)](https://github.styleci.io/repos/1204109942?branch=main)
 
 ## Features
 
