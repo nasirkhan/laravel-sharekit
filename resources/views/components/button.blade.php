@@ -15,7 +15,11 @@
     aria-label="{{ $label }}"
 >
     <span class="{{ trim(($classes['button_icon'] ?? '').' '.($iconClass ?? '')) }}" aria-hidden="true">
-        <x-sharekit::icon :network="$network" />
+        @if($network === 'copy')
+            🔗
+        @else
+            <x-sharekit::icon :network="$network" />
+        @endif
     </span>
 
     @if($showLabel)
