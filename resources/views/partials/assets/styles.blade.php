@@ -1,10 +1,10 @@
 <style>
     [data-sharekit] {
         --sk-font: ui-sans-serif, system-ui, sans-serif;
-        --sk-radius: 999px;
+        --sk-radius: 5px;
         --sk-gap: 0.75rem;
-        --sk-padding-y: 0.72rem;
-        --sk-padding-x: 1rem;
+        --sk-padding-y: 0.5rem;
+        --sk-padding-x: 0.85rem;
         --sk-font-size: 0.95rem;
         --sk-font-weight: 600;
         --sk-bg: #ffffff;
@@ -63,7 +63,7 @@
         align-items: center;
         justify-content: center;
         gap: 0.65rem;
-        min-height: 2.85rem;
+        min-height: 2.4rem;
         padding: var(--sk-padding-y) var(--sk-padding-x);
         border-radius: var(--sk-radius);
         border: 1px solid var(--sk-border);
@@ -76,7 +76,6 @@
     }
 
     [data-sharekit] .sk-button:hover {
-        transform: translateY(-1px);
         box-shadow: var(--sk-hover-shadow);
     }
 
@@ -109,15 +108,15 @@
     }
 
     [data-sharekit] [data-sharekit-size="sm"] {
-        --sk-padding-y: 0.6rem;
-        --sk-padding-x: 0.85rem;
+        --sk-padding-y: 0.35rem;
+        --sk-padding-x: 0.65rem;
         --sk-font-size: 0.875rem;
         --sk-icon-size: 1rem;
     }
 
     [data-sharekit] [data-sharekit-size="lg"] {
-        --sk-padding-y: 0.85rem;
-        --sk-padding-x: 1.1rem;
+        --sk-padding-y: 0.65rem;
+        --sk-padding-x: 0.9rem;
         --sk-font-size: 1rem;
         --sk-icon-size: 1.2rem;
     }
@@ -134,6 +133,36 @@
 
     [data-sharekit] [data-sharekit-network="native"][hidden] {
         display: none !important;
+    }
+
+    /* Dark mode */
+    .dark [data-sharekit] {
+        --sk-bg: #1e293b;
+        --sk-text: #e2e8f0;
+        --sk-border: rgba(255, 255, 255, 0.1);
+        --sk-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        --sk-hover-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+        --sk-heading: #f8fafc;
+    }
+
+    .dark [data-sharekit][data-sharekit-theme="tailwind"] {
+        --sk-bg: #0f172a;
+        --sk-text: #cbd5e1;
+        --sk-border: rgba(148, 163, 184, 0.2);
+        --sk-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        --sk-hover-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        --sk-heading: #f1f5f9;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        [data-sharekit]:not([data-sharekit-no-auto-dark]) {
+            --sk-bg: #1e293b;
+            --sk-text: #e2e8f0;
+            --sk-border: rgba(255, 255, 255, 0.1);
+            --sk-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --sk-hover-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+            --sk-heading: #f8fafc;
+        }
     }
 
     @media (max-width: 640px) {
