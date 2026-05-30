@@ -136,6 +136,16 @@
     }
 
     /* Dark mode */
+    .dark [data-sharekit] [data-sharekit-network="x"],
+    .dark [data-sharekit] [data-sharekit-network="native"] { color: #e2e8f0; }
+    .dark [data-sharekit] [data-sharekit-network="copy"] { color: #94a3b8; }
+
+    @media (prefers-color-scheme: dark) {
+        [data-sharekit]:not([data-sharekit-no-auto-dark]) [data-sharekit-network="x"],
+        [data-sharekit]:not([data-sharekit-no-auto-dark]) [data-sharekit-network="native"] { color: #e2e8f0; }
+        [data-sharekit]:not([data-sharekit-no-auto-dark]) [data-sharekit-network="copy"] { color: #94a3b8; }
+    }
+
     .dark [data-sharekit] {
         --sk-bg: #1e293b;
         --sk-text: #e2e8f0;
