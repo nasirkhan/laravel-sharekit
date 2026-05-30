@@ -10,6 +10,12 @@ It is designed to work well as a standalone package or alongside packages like `
 [![Total Downloads](https://img.shields.io/packagist/dt/nasirkhan/laravel-sharekit.svg?style=flat-square)](https://packagist.org/packages/nasirkhan/laravel-sharekit)
 [![StyleCI](https://github.styleci.io/repos/1204109942/shield?branch=main)](https://github.styleci.io/repos/1204109942?branch=main)
 
+## Preview
+
+| Light Mode | Dark Mode |
+|---|---|
+| ![Light Mode](https://github.com/user-attachments/assets/eb0079a8-8e2c-4120-bf51-2c265a2dc686) | ![Dark Mode](https://github.com/user-attachments/assets/f7e4f4da-e447-4dd0-9d0c-6d95f4aa6c9b) |
+
 ## Features
 
 - Blade component for grouped share buttons
