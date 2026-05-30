@@ -12,11 +12,13 @@ It is designed to work well as a standalone package or alongside packages like `
 
 ## Preview
 
-| Light Mode |
-|---|---|
-| ![Light Mode](https://github.com/user-attachments/assets/eb0079a8-8e2c-4120-bf51-2c265a2dc686)  |
-| Dark Mode |
-| ![Dark Mode](https://github.com/user-attachments/assets/f7e4f4da-e447-4dd0-9d0c-6d95f4aa6c9b)
+### Light Mode (Screenshot from Tailwind theme)
+
+![Light Mode](https://github.com/user-attachments/assets/eb0079a8-8e2c-4120-bf51-2c265a2dc686)
+
+### Dark Mode (Screenshot from Tailwind theme)
+
+![Dark Mode](https://github.com/user-attachments/assets/f7e4f4da-e447-4dd0-9d0c-6d95f4aa6c9b)
 
 ## Features
 
