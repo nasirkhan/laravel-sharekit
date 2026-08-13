@@ -11,6 +11,7 @@ return [
         'height' => 700,
     ],
     'use_native_when_available' => true,
+    'icon_only'                 => env('SHAREKIT_ICON_ONLY', false),
     'button_tag'                => 'button',
     'networks'                  => [
         'x',

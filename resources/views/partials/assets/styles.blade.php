@@ -175,6 +175,35 @@
         }
     }
 
+    /* Icon-only tooltip */
+    [data-sharekit] [data-tooltip] {
+        position: relative;
+    }
+
+    [data-sharekit] [data-tooltip]::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: calc(100% + 7px);
+        left: 50%;
+        transform: translateX(-50%) scale(0.95);
+        background: rgba(15, 23, 42, 0.88);
+        color: #f8fafc;
+        font-size: 0.72rem;
+        font-weight: 500;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 140ms ease, transform 140ms ease;
+        z-index: 50;
+    }
+
+    [data-sharekit] [data-tooltip]:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
     @media (max-width: 640px) {
         [data-sharekit] .sk-list {
             gap: 0.6rem;
@@ -187,6 +216,16 @@
 
         [data-sharekit] .sk-item {
             flex: 1 1 calc(50% - 0.6rem);
+        }
+
+        /* Icon-only: keep buttons square on mobile, don't stretch */
+        [data-sharekit] .sk-button[data-tooltip] {
+            width: auto;
+            justify-content: center;
+        }
+
+        [data-sharekit] .sk-item:has(> .sk-button[data-tooltip]) {
+            flex: 0 0 auto;
         }
     }
 </style>
