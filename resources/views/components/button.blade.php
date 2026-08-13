@@ -13,6 +13,7 @@
     data-sharekit-popup="{{ $popup ? 'true' : 'false' }}"
     data-sharekit-size="{{ $size }}"
     aria-label="{{ $label }}"
+    @if(!$showLabel) data-tooltip="{{ $label }}" @endif
 >
     <span class="{{ trim(($classes['button_icon'] ?? '').' '.($iconClass ?? '')) }}" aria-hidden="true">
         @if($network === 'copy')

@@ -16,9 +16,13 @@ It is designed to work well as a standalone package or alongside packages like `
 
 ![Light Mode](https://github.com/user-attachments/assets/eb0079a8-8e2c-4120-bf51-2c265a2dc686)
 
+![Light Mode | Icon Only](https://github.com/user-attachments/assets/4dba48e5-37cf-4824-a304-0a0e712475b8)
+
 ### Dark Mode (Screenshot from Tailwind theme)
 
 ![Dark Mode](https://github.com/user-attachments/assets/f7e4f4da-e447-4dd0-9d0c-6d95f4aa6c9b)
+
+![Dark Mode | Icon Only](https://github.com/user-attachments/assets/84f1a268-7f16-424e-b70c-2eda14497dee)
 
 ## Features
 
@@ -29,6 +33,7 @@ It is designed to work well as a standalone package or alongside packages like `
 - Native Web Share API support where available
 - Popup-based sharing for common social networks
 - Copy-link action with feedback state
+- Icon-only mode with CSS-only hover tooltip showing the platform name
 - Configurable default theme, labels, enabled networks, popup size, and stack names
 - Theme-ready structure with `default` and `tailwind` presets, with room for future themes
 
@@ -126,6 +131,45 @@ This is useful when your page already includes tags like:
 />
 ```
 
+## Icon Only Mode
+
+Pass `:icon-only="true"` to hide the text labels and show only the network icon. When hovered, a small tooltip with the platform name appears above the button — implemented in pure CSS with no extra JavaScript.
+
+```blade
+<x-sharekit::buttons :icon-only="true" />
+```
+
+With additional props:
+
+```blade
+<x-sharekit::buttons
+    :icon-only="true"
+    theme="tailwind"
+    :url="route('posts.show', $post)"
+    :title="$post->name"
+    :networks="['x', 'facebook', 'linkedin', 'whatsapp', 'copy']"
+/>
+```
+
+To enable icon-only mode globally, set it in the config file or via an environment variable:
+
+```php
+// config/sharekit.php
+'icon_only' => true,
+```
+
+```env
+SHAREKIT_ICON_ONLY=true
+```
+
+You can also use `show-labels` directly if you only want to suppress labels without the `icon-only` shorthand:
+
+```blade
+<x-sharekit::buttons :show-labels="false" />
+```
+
+Note: `icon-only` is a convenience prop that sets `show-labels` to `false` and enables the hover tooltip automatically.
+
 ## Available Props
 
 `<x-sharekit::buttons />` supports these main props:
@@ -142,6 +186,7 @@ This is useful when your page already includes tags like:
 - `label`
 - `show-labels`
 - `show-heading`
+- `icon-only`
 - `size`
 - `popup`
 - `native`
@@ -189,6 +234,7 @@ The config file includes options for:
 - Blade stack names
 - popup dimensions
 - whether native sharing is enabled when available
+- icon-only mode (hides labels, enables hover tooltips)
 - default enabled networks
 - label text
 - theme class maps

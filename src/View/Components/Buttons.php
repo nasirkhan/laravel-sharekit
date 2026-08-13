@@ -38,6 +38,7 @@ class Buttons extends Component
         public ?string $size = 'md',
         public bool $popup = true,
         public bool $native = true,
+        public bool $iconOnly = false,
     ) {
         $metadataResolver = new MetadataResolver();
 
@@ -59,6 +60,10 @@ class Buttons extends Component
             ->when(!$this->native, fn ($collection) => $collection->reject('native'))
             ->values()
             ->all();
+
+        if ($this->iconOnly || config('sharekit.icon_only', false)) {
+            $this->showLabels = false;
+        }
 
         $this->theme = $this->theme ?: config('sharekit.theme', 'default');
         $this->label = $this->label ?: config('sharekit.labels.share', 'Share');
