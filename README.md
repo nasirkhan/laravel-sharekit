@@ -16,9 +16,13 @@ It is designed to work well as a standalone package or alongside packages like `
 
 ![Light Mode](https://github.com/user-attachments/assets/eb0079a8-8e2c-4120-bf51-2c265a2dc686)
 
+![Light Mode | Icon Only](https://github.com/user-attachments/assets/4dba48e5-37cf-4824-a304-0a0e712475b8)
+
 ### Dark Mode (Screenshot from Tailwind theme)
 
 ![Dark Mode](https://github.com/user-attachments/assets/f7e4f4da-e447-4dd0-9d0c-6d95f4aa6c9b)
+
+![Dark Mode | Icon Only](https://github.com/user-attachments/assets/84f1a268-7f16-424e-b70c-2eda14497dee)
 
 ## Features
 
