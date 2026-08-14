@@ -39,6 +39,7 @@ class Buttons extends Component
         public bool $popup = true,
         public bool $native = true,
         public bool $iconOnly = false,
+        public bool $compact = false,
     ) {
         $metadataResolver = new MetadataResolver();
 

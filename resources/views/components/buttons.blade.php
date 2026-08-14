@@ -30,6 +30,7 @@
     data-sharekit-popup-height="{{ $popupHeight() }}"
     data-sharekit-native="{{ config('sharekit.use_native_when_available', true) && $native ? 'true' : 'false' }}"
     data-sharekit-size="{{ $size }}"
+    @if($compact) data-sharekit-compact @endif
     data-sharekit-copied-label="{{ config('sharekit.labels.copied', 'Copied') }}"
 >
     @if($showHeading)
