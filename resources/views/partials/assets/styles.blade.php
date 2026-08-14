@@ -121,6 +121,24 @@
         --sk-icon-size: 1.2rem;
     }
 
+    [data-sharekit][data-sharekit-compact] {
+        --sk-gap: 0.4rem;
+        --sk-padding-y: 0.25rem;
+        --sk-padding-x: 0.5rem;
+        --sk-font-size: 0.8rem;
+        --sk-icon-size: 0.9rem;
+    }
+
+    [data-sharekit][data-sharekit-compact] .sk-button {
+        min-height: 1.75rem;
+        gap: 0.4rem;
+    }
+
+    [data-sharekit][data-sharekit-compact] .sk-button-icon {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
     [data-sharekit] [data-sharekit-network="x"] { color: #111827; }
     [data-sharekit] [data-sharekit-network="facebook"] { color: #1877f2; }
     [data-sharekit] [data-sharekit-network="linkedin"] { color: #0a66c2; }

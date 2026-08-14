@@ -34,6 +34,7 @@ It is designed to work well as a standalone package or alongside packages like `
 - Popup-based sharing for common social networks
 - Copy-link action with feedback state
 - Icon-only mode with CSS-only hover tooltip showing the platform name
+- Compact mode with reduced padding and gap for tight layouts
 - Configurable default theme, labels, enabled networks, popup size, and stack names
 - Theme-ready structure with `default` and `tailwind` presets, with room for future themes
 
@@ -170,6 +171,34 @@ You can also use `show-labels` directly if you only want to suppress labels with
 
 Note: `icon-only` is a convenience prop that sets `show-labels` to `false` and enables the hover tooltip automatically.
 
+## Compact Mode
+
+Pass `:compact="true"` to render the buttons with less padding, a smaller gap, and a reduced font and icon size. Useful in sidebars, cards, or any place where a full-size row of buttons would feel heavy.
+
+```blade
+<x-sharekit::buttons :compact="true" />
+```
+
+Compact mode combines with all other props, including `icon-only`, `size`, and `theme`:
+
+```blade
+{{-- Compact + icon-only in a sidebar --}}
+<x-sharekit::buttons
+    :compact="true"
+    :icon-only="true"
+    :networks="['x', 'facebook', 'linkedin', 'copy']"
+/>
+
+{{-- Compact with labels and the tailwind theme --}}
+<x-sharekit::buttons
+    :compact="true"
+    theme="tailwind"
+    :url="route('posts.show', $post)"
+    :title="$post->name"
+    :networks="['x', 'facebook', 'linkedin', 'whatsapp', 'copy']"
+/>
+```
+
 ## Available Props
 
 `<x-sharekit::buttons />` supports these main props:
@@ -187,6 +216,7 @@ Note: `icon-only` is a convenience prop that sets `show-labels` to `false` and e
 - `show-labels`
 - `show-heading`
 - `icon-only`
+- `compact`
 - `size`
 - `popup`
 - `native`
