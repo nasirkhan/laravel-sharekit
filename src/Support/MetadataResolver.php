@@ -37,7 +37,7 @@ class MetadataResolver
     {
         $empty = ['title' => '', 'description' => '', 'image' => ''];
 
-        if (! class_exists(\Laravel\Head\Facades\Head::class)) {
+        if (!class_exists(\Laravel\Head\Facades\Head::class)) {
             return $empty;
         }
 
