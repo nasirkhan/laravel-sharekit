@@ -280,7 +280,7 @@ Example:
 
 ## Working With Laravel Cube
 
-Laravel Sharekit works nicely with `nasirkhan/laravel-cube`.
+Laravel Sharekit works nicely with [nasirkhan/laravel-cube](https://github.com/nasirkhan/laravel-cube) and [nasirkhan/laravel-starter](https://github.com/nasirkhan/laravel-starter).
 
 A typical pattern is:
 
