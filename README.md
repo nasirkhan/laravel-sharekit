@@ -14,15 +14,11 @@ It is designed to work well as a standalone package or alongside packages like `
 
 ### Light Mode (Screenshot from Tailwind theme)
 
-![Light Mode](https://github.com/user-attachments/assets/eb0079a8-8e2c-4120-bf51-2c265a2dc686)
-
-![Light Mode | Icon Only](https://github.com/user-attachments/assets/4dba48e5-37cf-4824-a304-0a0e712475b8)
+<img width="1065" height="738" alt="Image" src="https://github.com/user-attachments/assets/d691d7c8-0d6a-44aa-8687-daea27144a79" />
 
 ### Dark Mode (Screenshot from Tailwind theme)
 
-![Dark Mode](https://github.com/user-attachments/assets/f7e4f4da-e447-4dd0-9d0c-6d95f4aa6c9b)
-
-![Dark Mode | Icon Only](https://github.com/user-attachments/assets/84f1a268-7f16-424e-b70c-2eda14497dee)
+<img width="1062" height="743" alt="Image" src="https://github.com/user-attachments/assets/da8db940-532c-49ca-a085-81a2e15420ea" />
 
 ## Features
 
