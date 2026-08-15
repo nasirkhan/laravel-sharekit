@@ -199,6 +199,44 @@ Compact mode combines with all other props, including `icon-only`, `size`, and `
 />
 ```
 
+## Button Size
+
+Use the `size` prop to scale the buttons uniformly. The available values are `sm`, `md` (default), and `lg`. Size adjusts the padding, font size, and icon size proportionally.
+
+```blade
+<x-sharekit::buttons size="sm" />
+<x-sharekit::buttons size="md" />  {{-- default --}}
+<x-sharekit::buttons size="lg" />
+```
+
+**`size` is not the same as `:compact="true"`.**
+
+| | What changes |
+|---|---|
+| `size="sm"` | Reduces padding, font, and icon size proportionally — the button shape stays the same |
+| `:compact="true"` | Reduces padding, gap, font, and icon size, and also lowers the minimum button height — intended for tight layouts like sidebars or cards |
+
+They can be combined for an even smaller result:
+
+```blade
+<x-sharekit::buttons size="sm" :compact="true" />
+```
+
+## Section Heading
+
+The `label` prop sets the accessible label used on the button list (`aria-label`). It also controls the visible heading text, but the heading is **hidden by default**.
+
+To render the heading visibly above the buttons, you must pass both `label` and `:show-heading="true"`:
+
+```blade
+<x-sharekit::buttons
+    label="{{ __('Share with others') }}"
+    :show-heading="true"
+/>
+```
+
+Without `:show-heading="true"`, `label` is still used for accessibility but nothing is rendered visually. The heading defaults to `'Share'` (configurable in `config/sharekit.php` under `labels.share`) if `label` is not provided.
+
 ## Available Props
 
 `<x-sharekit::buttons />` supports these main props:

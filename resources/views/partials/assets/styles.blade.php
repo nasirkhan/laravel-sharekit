@@ -41,7 +41,8 @@
     }
 
     [data-sharekit] .sk-heading {
-        margin-bottom: 0.85rem;
+        padding-top: 0.85rem;
+        padding-bottom: 0.85rem;
         color: var(--sk-heading);
         font-size: 0.95rem;
         font-weight: 700;
